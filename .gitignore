@@ -3,3 +3,4 @@ build
 node_modules
 .bsb.lock
 lib/bs
+lib/bs
