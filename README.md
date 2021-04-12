@@ -7,5 +7,7 @@ I needed to know how to implement it so I when ahead and did it.
 # Running
 
 ```sh
+> git clone https://github.com/idkjs/rescript-state-machine-twitter
+> cd rescript-state-machine-twitter
 > yarn && yarn dev
 ```
