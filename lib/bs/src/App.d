@@ -1,1 +1,1 @@
-src/App.cmj : src/TwitterButton.cmj src/TwitterButton.cmi
+src/App.cmj : src/StateMachine.cmj src/StateMachine.cmi src/TwitterButton.cmj src/TwitterButton.cmi
