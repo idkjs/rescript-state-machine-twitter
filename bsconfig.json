@@ -20,18 +20,6 @@
   "bs-dev-dependencies": [],
   "gentypeconfig": {
     "language": "typescript",
-    "module": "es6",
-    "importPath": "relative",
-    "shims": {
-      "Js": "Js",
-      "React": "ReactShim",
-      "ReactEvent": "ReactEvent",
-      "ReasonPervasives": "ReasonPervasives",
-      "ReasonReact": "ReactShim"
-    },
-    "debug": {
-      "all": false
-    },
-    "exportInterfaces": false
+    "module": "es6"
   }
 }

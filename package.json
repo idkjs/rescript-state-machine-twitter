@@ -4,6 +4,7 @@
     "build": "run-s build:**",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1",
     "build:re": "bsb -clean-world -make-world",
+    "clean": "bsb -clean-world",
     "build:snowpack": "snowpack build",
     "postinstall": "bsb -make-world",
     "start:re": "bsb -make-world -w",
