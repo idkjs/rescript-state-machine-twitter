@@ -43,6 +43,6 @@ export createSubject = (initial: 'value) => {
   }
 }
 
-let sub =createSubject(1)
+let sub =createSubject([1,2,3,4,5])
 let v = sub.get()
 Js.log(v)

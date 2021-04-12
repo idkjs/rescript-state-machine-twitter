@@ -47,7 +47,13 @@ function createSubject(initial) {
         };
 }
 
-var sub = createSubject(1);
+var sub = createSubject([
+      1,
+      2,
+      3,
+      4,
+      5
+    ]);
 
 var v = Curry._1(sub.get, undefined);
 
