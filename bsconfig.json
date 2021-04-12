@@ -1,0 +1,37 @@
+{
+  "name": "app",
+  "reason": {
+    "react-jsx": 3
+  },
+  "suffix": ".bs.js",
+  "sources": {
+    "dir": "src",
+    "subdirs": true
+  },
+  "bsc-flags": [ "-bs-super-errors", "-bs-no-version-header" ],
+  "package-specs": [
+    {
+      "module": "es6",
+      "in-source": true
+    }
+  ],
+  "warnings": {"number": "-44"},
+  "bs-dependencies": [ "@rescript/react", "bs-css", "bs-css-emotion" ,"bs-webapi"],
+  "bs-dev-dependencies": [],
+  "gentypeconfig": {
+    "language": "typescript",
+    "module": "es6",
+    "importPath": "relative",
+    "shims": {
+      "Js": "Js",
+      "React": "ReactShim",
+      "ReactEvent": "ReactEvent",
+      "ReasonPervasives": "ReasonPervasives",
+      "ReasonReact": "ReactShim"
+    },
+    "debug": {
+      "all": false
+    },
+    "exportInterfaces": false
+  }
+}

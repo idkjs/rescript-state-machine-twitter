@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "start": "run-p start:**",
+    "build": "run-s build:**",
+    "test": "echo \"This template does not include a test runner by default.\" && exit 1",
+    "build:re": "bsb -clean-world -make-world",
+    "build:snowpack": "snowpack build",
+    "postinstall": "bsb -make-world",
+    "start:re": "bsb -make-world -w",
+    "start:snowpack": "snowpack dev"
+  },
+  "dependencies": {
+    "@rescript/react": "^0.10.1",
+    "bs-css-emotion": "^2.5.1",
+    "bs-platform": "^9.0.2",
+    "bs-webapi": "^0.19.1",
+    "react": "experimental",
+    "react-dom": "experimental"
+  },
+  "devDependencies": {
+    "@snowpack/plugin-react-refresh": "^2.4.2",
+    "gentype": "^3.45.0",
+    "npm-run-all": "^4.1.5",
+    "snowpack": "^3.2.2"
+  }
+}
