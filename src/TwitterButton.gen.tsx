@@ -1,4 +1,4 @@
-/* TypeScript file generated from FollowState.res by genType. */
+/* TypeScript file generated from TwitterButton.res by genType. */
 /* eslint-disable import/first */
 
 
@@ -9,10 +9,8 @@ const $$toRE644659689: { [key: string]: any } = {"Following": 0, "FollowingHover
 const $$toRE972952197: { [key: string]: any } = {"Click": 0, "MouseOver": 1, "MouseOut": 2};
 
 // @ts-ignore: Implicit any on import
-import * as FollowStateBS__Es6Import from './FollowState.bs';
-const FollowStateBS: any = FollowStateBS__Es6Import;
-
-import {t as ButtonStyle_t} from './ButtonStyle.gen';
+import * as TwitterButtonBS__Es6Import from './TwitterButton.bs';
+const TwitterButtonBS: any = TwitterButtonBS__Es6Import;
 
 // tslint:disable-next-line:interface-over-type-literal
 export type state = 
@@ -23,19 +21,19 @@ export type state =
   | "NotFollowingHover";
 
 // tslint:disable-next-line:interface-over-type-literal
-export type eventType = "Click" | "MouseOver" | "MouseOut";
+export type event = "Click" | "MouseOver" | "MouseOut";
+
+export const handleButtonStyling: (state:state) => string = function (Arg1: any) {
+  const result = TwitterButtonBS.handleButtonStyling($$toRE644659689[Arg1]);
+  return result
+};
 
 export const getText: (state:state) => string = function (Arg1: any) {
-  const result = FollowStateBS.getText($$toRE644659689[Arg1]);
+  const result = TwitterButtonBS.getText($$toRE644659689[Arg1]);
   return result
 };
 
-export const getButtonStyle: (state:state) => ButtonStyle_t = function (Arg1: any) {
-  const result = FollowStateBS.getButtonStyle($$toRE644659689[Arg1]);
-  return result
-};
-
-export const machine: (_1:state, _2:eventType) => state = function (Arg1: any, Arg2: any) {
-  const result = FollowStateBS.machine($$toRE644659689[Arg1], $$toRE972952197[Arg2]);
+export const machine: (_1:state, _2:event) => state = function (Arg1: any, Arg2: any) {
+  const result = TwitterButtonBS.machine($$toRE644659689[Arg1], $$toRE972952197[Arg2]);
   return $$toJS644659689[result]
 };

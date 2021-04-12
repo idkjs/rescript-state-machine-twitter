@@ -189,7 +189,7 @@ function reducer(state, $$event) {
   return machine(state, $$event);
 }
 
-function TwitterButtonVerbose(Props) {
+function TwitterButton(Props) {
   var match = React.useReducer(reducer, /* NotFollowing */3);
   var $$event = match[1];
   var state = match[0];
@@ -211,7 +211,7 @@ function TwitterButtonVerbose(Props) {
   return React.createElement(React.Fragment, undefined, renderButtonWithStyle(handleButtonStyling(state)));
 }
 
-var make = TwitterButtonVerbose;
+var make = TwitterButton;
 
 export {
   theButtonStyleIs ,

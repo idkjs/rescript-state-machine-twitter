@@ -1,7 +1,7 @@
 
 
 import * as React from "react";
-import * as TwitterButtonVerbose from "./twitter/TwitterButtonVerbose.bs.js";
+import * as TwitterButton from "./TwitterButton.bs.js";
 
 import './App.css';
 ;
@@ -9,7 +9,7 @@ import './App.css';
 function App(Props) {
   return React.createElement("div", {
               className: "App"
-            }, React.createElement("div", undefined, "Twitter Button State"), React.createElement(TwitterButtonVerbose.make, {}));
+            }, React.createElement("div", undefined, "Twitter Button State"), React.createElement(TwitterButton.make, {}));
 }
 
 var make = App;

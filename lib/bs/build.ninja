@@ -1,133 +1,36 @@
 rescript = 1
-g_finger := /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml/install.stamp
-g_finger := /Users/mando/Github/fancy-input-refs/node_modules/bs-css/lib/ocaml/install.stamp
-g_finger := /Users/mando/Github/fancy-input-refs/node_modules/bs-css-emotion/lib/ocaml/install.stamp
-g_finger := /Users/mando/Github/fancy-input-refs/node_modules/bs-webapi/lib/ocaml/install.stamp
-cleaner = /Users/mando/Github/fancy-input-refs/node_modules/gentype/gentype.exe
+g_finger := /Users/mando/Github/rescript-state-machine-twitter/node_modules/@rescript/react/lib/ocaml/install.stamp
+g_finger := /Users/mando/Github/rescript-state-machine-twitter/node_modules/bs-css/lib/ocaml/install.stamp
+g_finger := /Users/mando/Github/rescript-state-machine-twitter/node_modules/bs-css-emotion/lib/ocaml/install.stamp
+cleaner = /Users/mando/Github/rescript-state-machine-twitter/node_modules/gentype/gentype.exe
 rule astj
-  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -w -44 -bs-v 9.0.2 -bs-jsx 3 -bs-super-errors -bs-no-version-header -absname -bs-ast -o $out $i
+  command = /Users/mando/Github/rescript-state-machine-twitter/node_modules/bs-platform/darwin/bsc.exe -w -44 -bs-v 9.0.2 -bs-jsx 3 -bs-super-errors -bs-no-version-header -absname -bs-ast -o $out $i
 o src/App.ast : astj ../../src/App.res
 rule deps
-  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsb_helper.exe -hash c8158430efe53a88730f17e053d884d5 $in
+  command = /Users/mando/Github/rescript-state-machine-twitter/node_modules/bs-platform/darwin/bsb_helper.exe -hash 037a53256e23694f75673333d11664bf $in
   restat = 1
 o src/App.d : deps src/App.ast
 rule mij
-  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -I src/twitter -I src/state -I src/refsjs -I src/shims -I src/devto -I src/refs -I src/retask -I src/bindings -I src -I /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml -I /Users/mando/Github/fancy-input-refs/node_modules/bs-css/lib/ocaml -I /Users/mando/Github/fancy-input-refs/node_modules/bs-css-emotion/lib/ocaml -I /Users/mando/Github/fancy-input-refs/node_modules/bs-webapi/lib/ocaml -bs-super-errors -bs-no-version-header -w -44 -bs-gentype /Users/mando/Github/fancy-input-refs/node_modules/gentype/gentype.exe -bs-package-name app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  command = /Users/mando/Github/rescript-state-machine-twitter/node_modules/bs-platform/darwin/bsc.exe -I src/shims -I src/bindings -I src -I /Users/mando/Github/rescript-state-machine-twitter/node_modules/@rescript/react/lib/ocaml -I /Users/mando/Github/rescript-state-machine-twitter/node_modules/bs-css/lib/ocaml -I /Users/mando/Github/rescript-state-machine-twitter/node_modules/bs-css-emotion/lib/ocaml -bs-super-errors -bs-no-version-header -w -44 -bs-gentype /Users/mando/Github/rescript-state-machine-twitter/node_modules/gentype/gentype.exe -bs-package-name app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
   dyndep = 1
   restat = 1
 o src/App.cmj src/App.cmi ../../src/App.bs.js : mij src/App.ast
 o src/Index.ast : astj ../../src/Index.res
 o src/Index.d : deps src/Index.ast
 o src/Index.cmj src/Index.cmi ../../src/Index.bs.js : mij src/Index.ast
+o src/TwitterButton.ast : astj ../../src/TwitterButton.res
+o src/TwitterButton.d : deps src/TwitterButton.ast
+o src/TwitterButton.cmj src/TwitterButton.cmi ../../src/TwitterButton.bs.js : mij src/TwitterButton.ast
 o src/bindings/ReactDomExperimental.ast : astj ../../src/bindings/ReactDomExperimental.res
 o src/bindings/ReactDomExperimental.d : deps src/bindings/ReactDomExperimental.ast src/bindings/ReactDomExperimental.iast
 o src/bindings/ReactDomExperimental.iast : astj ../../src/bindings/ReactDomExperimental.resi
 rule mi
-  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -I src/twitter -I src/state -I src/refsjs -I src/shims -I src/devto -I src/refs -I src/retask -I src/bindings -I src -I /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml -I /Users/mando/Github/fancy-input-refs/node_modules/bs-css/lib/ocaml -I /Users/mando/Github/fancy-input-refs/node_modules/bs-css-emotion/lib/ocaml -I /Users/mando/Github/fancy-input-refs/node_modules/bs-webapi/lib/ocaml -bs-super-errors -bs-no-version-header -w -44 -bs-gentype /Users/mando/Github/fancy-input-refs/node_modules/gentype/gentype.exe -bs-v $g_finger $i
+  command = /Users/mando/Github/rescript-state-machine-twitter/node_modules/bs-platform/darwin/bsc.exe -I src/shims -I src/bindings -I src -I /Users/mando/Github/rescript-state-machine-twitter/node_modules/@rescript/react/lib/ocaml -I /Users/mando/Github/rescript-state-machine-twitter/node_modules/bs-css/lib/ocaml -I /Users/mando/Github/rescript-state-machine-twitter/node_modules/bs-css-emotion/lib/ocaml -bs-super-errors -bs-no-version-header -w -44 -bs-gentype /Users/mando/Github/rescript-state-machine-twitter/node_modules/gentype/gentype.exe -bs-v $g_finger $i
   dyndep = 1
   restat = 1
 o src/bindings/ReactDomExperimental.cmi : mi src/bindings/ReactDomExperimental.iast
 rule mj
-  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -bs-read-cmi -I src/twitter -I src/state -I src/refsjs -I src/shims -I src/devto -I src/refs -I src/retask -I src/bindings -I src -I /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml -I /Users/mando/Github/fancy-input-refs/node_modules/bs-css/lib/ocaml -I /Users/mando/Github/fancy-input-refs/node_modules/bs-css-emotion/lib/ocaml -I /Users/mando/Github/fancy-input-refs/node_modules/bs-webapi/lib/ocaml -bs-super-errors -bs-no-version-header -w -44 -bs-gentype /Users/mando/Github/fancy-input-refs/node_modules/gentype/gentype.exe -bs-package-name app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  command = /Users/mando/Github/rescript-state-machine-twitter/node_modules/bs-platform/darwin/bsc.exe -bs-read-cmi -I src/shims -I src/bindings -I src -I /Users/mando/Github/rescript-state-machine-twitter/node_modules/@rescript/react/lib/ocaml -I /Users/mando/Github/rescript-state-machine-twitter/node_modules/bs-css/lib/ocaml -I /Users/mando/Github/rescript-state-machine-twitter/node_modules/bs-css-emotion/lib/ocaml -bs-super-errors -bs-no-version-header -w -44 -bs-gentype /Users/mando/Github/rescript-state-machine-twitter/node_modules/gentype/gentype.exe -bs-package-name app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
   dyndep = 1
   restat = 1
 o src/bindings/ReactDomExperimental.cmj ../../src/bindings/ReactDomExperimental.bs.js : mj src/bindings/ReactDomExperimental.ast src/bindings/ReactDomExperimental.cmi
-o src/retask/ws.ast : astj ../../src/retask/ws.res
-o src/retask/ws.d : deps src/retask/ws.ast
-o src/retask/ws.cmj src/retask/ws.cmi ../../src/retask/ws.bs.js : mij src/retask/ws.ast
-o src/retask/cmd.ast : astj ../../src/retask/cmd.res
-o src/retask/cmd.d : deps src/retask/cmd.ast
-o src/retask/cmd.cmj src/retask/cmd.cmi ../../src/retask/cmd.bs.js : mij src/retask/cmd.ast
-o src/retask/sub.ast : astj ../../src/retask/sub.res
-o src/retask/sub.d : deps src/retask/sub.ast
-o src/retask/sub.cmj src/retask/sub.cmi ../../src/retask/sub.bs.js : mij src/retask/sub.ast
-o src/retask/xhr.ast : astj ../../src/retask/xhr.res
-o src/retask/xhr.d : deps src/retask/xhr.ast
-o src/retask/xhr.cmj src/retask/xhr.cmi ../../src/retask/xhr.bs.js : mij src/retask/xhr.ast
-o src/retask/task.ast : astj ../../src/retask/task.res
-o src/retask/task.d : deps src/retask/task.ast
-o src/retask/task.cmj src/retask/task.cmi ../../src/retask/task.bs.js : mij src/retask/task.ast
-o src/retask/time.ast : astj ../../src/retask/time.res
-o src/retask/time.d : deps src/retask/time.ast
-o src/retask/time.cmj src/retask/time.cmi ../../src/retask/time.bs.js : mij src/retask/time.ast
-o src/retask/util.ast : astj ../../src/retask/util.res
-o src/retask/util.d : deps src/retask/util.ast
-o src/retask/util.cmj src/retask/util.cmi ../../src/retask/util.bs.js : mij src/retask/util.ast
-o src/retask/ReTask.ast : astj ../../src/retask/ReTask.res
-o src/retask/ReTask.d : deps src/retask/ReTask.ast
-o src/retask/ReTask.cmj src/retask/ReTask.cmi ../../src/retask/ReTask.bs.js : mij src/retask/ReTask.ast
-o src/retask/domEvent.ast : astj ../../src/retask/domEvent.res
-o src/retask/domEvent.d : deps src/retask/domEvent.ast
-o src/retask/domEvent.cmj src/retask/domEvent.cmi ../../src/retask/domEvent.bs.js : mij src/retask/domEvent.ast
-o src/retask/listener.ast : astj ../../src/retask/listener.res
-o src/retask/listener.d : deps src/retask/listener.ast
-o src/retask/listener.cmj src/retask/listener.cmi ../../src/retask/listener.bs.js : mij src/retask/listener.ast
-o src/retask/RetaskEx.ast : astj ../../src/retask/RetaskEx.res
-o src/retask/RetaskEx.d : deps src/retask/RetaskEx.ast
-o src/retask/RetaskEx.cmj src/retask/RetaskEx.cmi ../../src/retask/RetaskEx.bs.js : mij src/retask/RetaskEx.ast
-o src/retask/WebSocket.ast : astj ../../src/retask/WebSocket.res
-o src/retask/WebSocket.d : deps src/retask/WebSocket.ast
-o src/retask/WebSocket.cmj src/retask/WebSocket.cmi ../../src/retask/WebSocket.bs.js : mij src/retask/WebSocket.ast
-o src/refs/FancyApp.ast : astj ../../src/refs/FancyApp.res
-o src/refs/FancyApp.d : deps src/refs/FancyApp.ast
-o src/refs/FancyApp.cmj src/refs/FancyApp.cmi ../../src/refs/FancyApp.bs.js : mij src/refs/FancyApp.ast
-o src/refs/NameInput.ast : astj ../../src/refs/NameInput.res
-o src/refs/NameInput.d : deps src/refs/NameInput.ast
-o src/refs/NameInput.cmj src/refs/NameInput.cmi ../../src/refs/NameInput.bs.js : mij src/refs/NameInput.ast
-o src/refs/FancyInput.ast : astj ../../src/refs/FancyInput.res
-o src/refs/FancyInput.d : deps src/refs/FancyInput.ast
-o src/refs/FancyInput.cmj src/refs/FancyInput.cmi ../../src/refs/FancyInput.bs.js : mij src/refs/FancyInput.ast
-o src/refs/NameInputApp.ast : astj ../../src/refs/NameInputApp.res
-o src/refs/NameInputApp.d : deps src/refs/NameInputApp.ast
-o src/refs/NameInputApp.cmj src/refs/NameInputApp.cmi ../../src/refs/NameInputApp.bs.js : mij src/refs/NameInputApp.ast
-o src/devto/Cats.ast : astj ../../src/devto/Cats.res
-o src/devto/Cats.d : deps src/devto/Cats.ast
-o src/devto/Cats.cmj src/devto/Cats.cmi ../../src/devto/Cats.bs.js : mij src/devto/Cats.ast
-o src/devto/BoxRef.ast : astj ../../src/devto/BoxRef.res
-o src/devto/BoxRef.d : deps src/devto/BoxRef.ast
-o src/devto/BoxRef.cmj src/devto/BoxRef.cmi ../../src/devto/BoxRef.bs.js : mij src/devto/BoxRef.ast
-o src/devto/HoverOverMe.ast : astj ../../src/devto/HoverOverMe.res
-o src/devto/HoverOverMe.d : deps src/devto/HoverOverMe.ast
-o src/devto/HoverOverMe.cmj src/devto/HoverOverMe.cmi ../../src/devto/HoverOverMe.bs.js : mij src/devto/HoverOverMe.ast
-o src/state/Erikras.ast : astj ../../src/state/Erikras.res
-o src/state/Erikras.d : deps src/state/Erikras.ast
-o src/state/Erikras.cmj src/state/Erikras.cmi ../../src/state/Erikras.bs.js : mij src/state/Erikras.ast
-o src/state/ErikrasUncurried.ast : astj ../../src/state/ErikrasUncurried.res
-o src/state/ErikrasUncurried.d : deps src/state/ErikrasUncurried.ast
-o src/state/ErikrasUncurried.cmj src/state/ErikrasUncurried.cmi ../../src/state/ErikrasUncurried.bs.js : mij src/state/ErikrasUncurried.ast
-o src/state/UncurriedReducer.ast : astj ../../src/state/UncurriedReducer.res
-o src/state/UncurriedReducer.d : deps src/state/UncurriedReducer.ast
-o src/state/UncurriedReducer.cmj src/state/UncurriedReducer.cmi ../../src/state/UncurriedReducer.bs.js : mij src/state/UncurriedReducer.ast
-o src/twitter/Theme.ast : astj ../../src/twitter/Theme.res
-o src/twitter/Theme.d : deps src/twitter/Theme.ast
-o src/twitter/Theme.cmj src/twitter/Theme.cmi ../../src/twitter/Theme.bs.js : mij src/twitter/Theme.ast
-o src/twitter/Button.ast : astj ../../src/twitter/Button.res
-o src/twitter/Button.d : deps src/twitter/Button.ast
-o src/twitter/Button.cmj src/twitter/Button.cmi ../../src/twitter/Button.bs.js : mij src/twitter/Button.ast
-o src/twitter/MouseOut.ast : astj ../../src/twitter/MouseOut.res
-o src/twitter/MouseOut.d : deps src/twitter/MouseOut.ast
-o src/twitter/MouseOut.cmj src/twitter/MouseOut.cmi ../../src/twitter/MouseOut.bs.js : mij src/twitter/MouseOut.ast
-o src/twitter/Settings.ast : astj ../../src/twitter/Settings.res
-o src/twitter/Settings.d : deps src/twitter/Settings.ast
-o src/twitter/Settings.cmj src/twitter/Settings.cmi ../../src/twitter/Settings.bs.js : mij src/twitter/Settings.ast
-o src/twitter/ButtonStyle.ast : astj ../../src/twitter/ButtonStyle.res
-o src/twitter/ButtonStyle.d : deps src/twitter/ButtonStyle.ast
-o src/twitter/ButtonStyle.cmj src/twitter/ButtonStyle.cmi ../../src/twitter/ButtonStyle.bs.js : mij src/twitter/ButtonStyle.ast
-o src/twitter/FollowState.ast : astj ../../src/twitter/FollowState.res
-o src/twitter/FollowState.d : deps src/twitter/FollowState.ast
-o src/twitter/FollowState.cmj src/twitter/FollowState.cmi ../../src/twitter/FollowState.bs.js : mij src/twitter/FollowState.ast
-o src/twitter/FollowStateV1.ast : astj ../../src/twitter/FollowStateV1.res
-o src/twitter/FollowStateV1.d : deps src/twitter/FollowStateV1.ast
-o src/twitter/FollowStateV1.cmj src/twitter/FollowStateV1.cmi ../../src/twitter/FollowStateV1.bs.js : mij src/twitter/FollowStateV1.ast
-o src/twitter/TwitterButton.ast : astj ../../src/twitter/TwitterButton.res
-o src/twitter/TwitterButton.d : deps src/twitter/TwitterButton.ast
-o src/twitter/TwitterButton.cmj src/twitter/TwitterButton.cmi ../../src/twitter/TwitterButton.bs.js : mij src/twitter/TwitterButton.ast
-o src/twitter/ButtonComponent.ast : astj ../../src/twitter/ButtonComponent.res
-o src/twitter/ButtonComponent.d : deps src/twitter/ButtonComponent.ast
-o src/twitter/ButtonComponent.cmj src/twitter/ButtonComponent.cmi ../../src/twitter/ButtonComponent.bs.js : mij src/twitter/ButtonComponent.ast
-o src/twitter/WindowListenerHook.ast : astj ../../src/twitter/WindowListenerHook.res
-o src/twitter/WindowListenerHook.d : deps src/twitter/WindowListenerHook.ast
-o src/twitter/WindowListenerHook.cmj src/twitter/WindowListenerHook.cmi ../../src/twitter/WindowListenerHook.bs.js : mij src/twitter/WindowListenerHook.ast
-o src/twitter/TwitterButtonVerbose.ast : astj ../../src/twitter/TwitterButtonVerbose.res
-o src/twitter/TwitterButtonVerbose.d : deps src/twitter/TwitterButtonVerbose.ast
-o src/twitter/TwitterButtonVerbose.cmj src/twitter/TwitterButtonVerbose.cmi ../../src/twitter/TwitterButtonVerbose.bs.js : mij src/twitter/TwitterButtonVerbose.ast

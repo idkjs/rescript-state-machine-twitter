@@ -16,7 +16,7 @@
     }
   ],
   "warnings": {"number": "-44"},
-  "bs-dependencies": [ "@rescript/react", "bs-css", "bs-css-emotion" ,"bs-webapi"],
+  "bs-dependencies": [ "@rescript/react", "bs-css", "bs-css-emotion"],
   "bs-dev-dependencies": [],
   "gentypeconfig": {
     "language": "typescript",

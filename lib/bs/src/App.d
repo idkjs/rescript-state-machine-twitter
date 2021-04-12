@@ -1,1 +1,1 @@
-src/App.cmj : src/twitter/TwitterButtonVerbose.cmj src/twitter/TwitterButtonVerbose.cmi
+src/App.cmj : src/TwitterButton.cmj src/TwitterButton.cmi

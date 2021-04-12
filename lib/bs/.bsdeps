@@ -1,13 +1,7 @@
 9.0.2
-/Users/mando/Github/fancy-input-refs
+/Users/mando/Github/rescript-state-machine-twitter
 0
-bsconfig.json	0x1.81cc0ba3b3c0ep+30
-src	0x1.81ccfcceb1e5dp+30
-src/bindings	0x1.81c67ceec436fp+30
-src/retask	0x1.81ccff890b75ep+30
-src/refs	0x1.81c682fac1307p+30
-src/devto	0x1.81cd0321ff5dbp+30
-src/shims	0x1.81cb2ff133da6p+30
-src/refsjs	0x1.81c68d111cd2p+30
-src/state	0x1.81cb2f8212c76p+30
-src/twitter	0x1.81d0adb814eb6p+30
+bsconfig.json	0x1.81d0c0652f2f1p+30
+src	0x1.81d0c1a22a4edp+30
+src/bindings	0x1.81d0c1a22b1d3p+30
+src/shims	0x1.81d0bd01ad78dp+30

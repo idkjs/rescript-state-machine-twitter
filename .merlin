@@ -1,28 +1,16 @@
 ####{BSB GENERATED: NO EDIT
-FLG -ppx '/Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -as-ppx -bs-jsx 3'
-S /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/lib/ocaml
-B /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/lib/ocaml
+FLG -ppx '/Users/mando/Github/rescript-state-machine-twitter/node_modules/bs-platform/darwin/bsc.exe -as-ppx -bs-jsx 3'
+S /Users/mando/Github/rescript-state-machine-twitter/node_modules/bs-platform/lib/ocaml
+B /Users/mando/Github/rescript-state-machine-twitter/node_modules/bs-platform/lib/ocaml
 FLG -w +a-4-9-20-40-41-42-50-61-102-44-40-42-61
-S /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml
-B /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml
-S /Users/mando/Github/fancy-input-refs/node_modules/bs-css/lib/ocaml
-B /Users/mando/Github/fancy-input-refs/node_modules/bs-css/lib/ocaml
-S /Users/mando/Github/fancy-input-refs/node_modules/bs-css-emotion/lib/ocaml
-B /Users/mando/Github/fancy-input-refs/node_modules/bs-css-emotion/lib/ocaml
-S /Users/mando/Github/fancy-input-refs/node_modules/bs-webapi/lib/ocaml
-B /Users/mando/Github/fancy-input-refs/node_modules/bs-webapi/lib/ocaml
+S /Users/mando/Github/rescript-state-machine-twitter/node_modules/@rescript/react/lib/ocaml
+B /Users/mando/Github/rescript-state-machine-twitter/node_modules/@rescript/react/lib/ocaml
+S /Users/mando/Github/rescript-state-machine-twitter/node_modules/bs-css/lib/ocaml
+B /Users/mando/Github/rescript-state-machine-twitter/node_modules/bs-css/lib/ocaml
+S /Users/mando/Github/rescript-state-machine-twitter/node_modules/bs-css-emotion/lib/ocaml
+B /Users/mando/Github/rescript-state-machine-twitter/node_modules/bs-css-emotion/lib/ocaml
 S src
 B lib/bs/src
 S src/bindings
 B lib/bs/src/bindings
-S src/retask
-B lib/bs/src/retask
-S src/refs
-B lib/bs/src/refs
-S src/devto
-B lib/bs/src/devto
-S src/state
-B lib/bs/src/state
-S src/twitter
-B lib/bs/src/twitter
 ####BSB GENERATED: NO EDIT}
