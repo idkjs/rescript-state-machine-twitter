@@ -11,6 +11,10 @@ o Index.cmi : cp ../bs/src/Index.cmi
 o Index.cmj : cp ../bs/src/Index.cmj
 o Index.cmt : cp ../bs/src/Index.cmt
 o Index.res : cp ../../src/Index.res
+o Observable.cmi : cp ../bs/src/Observable.cmi
+o Observable.cmj : cp ../bs/src/Observable.cmj
+o Observable.cmt : cp ../bs/src/Observable.cmt
+o Observable.res : cp ../../src/Observable.res
 o TwitterButton.cmi : cp ../bs/src/TwitterButton.cmi
 o TwitterButton.cmj : cp ../bs/src/TwitterButton.cmj
 o TwitterButton.cmt : cp ../bs/src/TwitterButton.cmt
@@ -21,4 +25,4 @@ o ReactDomExperimental.cmt : cp ../bs/src/bindings/ReactDomExperimental.cmt
 o ReactDomExperimental.res : cp ../../src/bindings/ReactDomExperimental.res
 o ReactDomExperimental.resi : cp ../../src/bindings/ReactDomExperimental.resi
 o ReactDomExperimental.cmti : cp ../bs/src/bindings/ReactDomExperimental.cmti
-build install.stamp : touch App.cmi App.cmj Index.cmi Index.cmj TwitterButton.cmi TwitterButton.cmj ReactDomExperimental.cmi ReactDomExperimental.cmj 
+build install.stamp : touch App.cmi App.cmj Index.cmi Index.cmj Observable.cmi Observable.cmj TwitterButton.cmi TwitterButton.cmj ReactDomExperimental.cmi ReactDomExperimental.cmj 

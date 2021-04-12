@@ -7,7 +7,7 @@ rule astj
   command = /Users/mando/Github/rescript-state-machine-twitter/node_modules/bs-platform/darwin/bsc.exe -w -44 -bs-v 9.0.2 -bs-jsx 3 -bs-super-errors -bs-no-version-header -absname -bs-ast -o $out $i
 o src/App.ast : astj ../../src/App.res
 rule deps
-  command = /Users/mando/Github/rescript-state-machine-twitter/node_modules/bs-platform/darwin/bsb_helper.exe -hash 037a53256e23694f75673333d11664bf $in
+  command = /Users/mando/Github/rescript-state-machine-twitter/node_modules/bs-platform/darwin/bsb_helper.exe -hash a0a181188b3e8e121fce34c7e1dd1f45 $in
   restat = 1
 o src/App.d : deps src/App.ast
 rule mij
@@ -18,6 +18,9 @@ o src/App.cmj src/App.cmi ../../src/App.bs.js : mij src/App.ast
 o src/Index.ast : astj ../../src/Index.res
 o src/Index.d : deps src/Index.ast
 o src/Index.cmj src/Index.cmi ../../src/Index.bs.js : mij src/Index.ast
+o src/Observable.ast : astj ../../src/Observable.res
+o src/Observable.d : deps src/Observable.ast
+o src/Observable.cmj src/Observable.cmi ../../src/Observable.bs.js : mij src/Observable.ast
 o src/TwitterButton.ast : astj ../../src/TwitterButton.res
 o src/TwitterButton.d : deps src/TwitterButton.ast
 o src/TwitterButton.cmj src/TwitterButton.cmi ../../src/TwitterButton.bs.js : mij src/TwitterButton.ast

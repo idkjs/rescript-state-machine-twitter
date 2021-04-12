@@ -2,6 +2,4 @@
 build
 node_modules
 .bsb.lock
-lib/bs
-lib/bs
-lib/bs/build.ninja
+lib

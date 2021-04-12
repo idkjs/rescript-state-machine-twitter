@@ -2,8 +2,11 @@
 
 import * as App from "./App.bs.js";
 import * as React from "react";
+import * as Observable from "./Observable.bs.js";
 import * as Caml_option from "bs-platform/lib/es6/caml_option.js";
 import * as ReactDomExperimental from "./bindings/ReactDomExperimental.bs.js";
+
+console.log("Observable_VALUE", Observable.v);
 
 var root = ReactDomExperimental.createRootWithId("root");
 
@@ -16,4 +19,4 @@ if (root !== undefined) {
 export {
   
 }
-/* root Not a pure module */
+/*  Not a pure module */
