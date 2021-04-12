@@ -114,22 +114,14 @@ let reducer = (state, event) => machine(. state, event)
 let make = () => {
   let (state, event) = React.useReducer(reducer, NotFollowing)
 
-  let renderButtonWithStyle = className =>
+  <>
     <button
       type_="button"
       onMouseEnter={_ => event(MouseOver)}
       onMouseLeave={_ => event(MouseOut)}
       onClick={_ => event(Click)}
-      className>
+      className={state->handleButtonStyling}>
       {React.string(getText(state))}
     </button>
-  <>
-    {switch state {
-    | Following => renderButtonWithStyle(state->handleButtonStyling)
-    | FollowingHover => renderButtonWithStyle(state->handleButtonStyling)
-    | FollowingNeverMouseOut => renderButtonWithStyle(state->handleButtonStyling)
-    | NotFollowing => renderButtonWithStyle(state->handleButtonStyling)
-    | NotFollowingHover => renderButtonWithStyle(state->handleButtonStyling)
-    }}
   </>
 }

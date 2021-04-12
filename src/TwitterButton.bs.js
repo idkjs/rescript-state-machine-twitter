@@ -193,22 +193,19 @@ function TwitterButton(Props) {
   var match = React.useReducer(reducer, /* NotFollowing */3);
   var $$event = match[1];
   var state = match[0];
-  var renderButtonWithStyle = function (className) {
-    return React.createElement("button", {
-                className: className,
-                type: "button",
-                onClick: (function (param) {
-                    return Curry._1($$event, /* Click */0);
-                  }),
-                onMouseEnter: (function (param) {
-                    return Curry._1($$event, /* MouseOver */1);
-                  }),
-                onMouseLeave: (function (param) {
-                    return Curry._1($$event, /* MouseOut */2);
-                  })
-              }, getText(state));
-  };
-  return React.createElement(React.Fragment, undefined, renderButtonWithStyle(handleButtonStyling(state)));
+  return React.createElement(React.Fragment, undefined, React.createElement("button", {
+                  className: handleButtonStyling(state),
+                  type: "button",
+                  onClick: (function (param) {
+                      return Curry._1($$event, /* Click */0);
+                    }),
+                  onMouseEnter: (function (param) {
+                      return Curry._1($$event, /* MouseOver */1);
+                    }),
+                  onMouseLeave: (function (param) {
+                      return Curry._1($$event, /* MouseOut */2);
+                    })
+                }, getText(state)));
 }
 
 var make = TwitterButton;
