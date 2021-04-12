@@ -13,3 +13,9 @@ I needed to know how to implement it so I when ahead and did it.
 ```
 
 ![screen-shot](./TwitterButton.png)
+
+# A reducer is a single-state state machine
+
+https://erikras.com/blog/reducer-single-state-machine
+
+Demo at [StateMachine.res](src/StateMachine.res)
