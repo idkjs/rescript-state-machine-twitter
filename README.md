@@ -11,3 +11,5 @@ I needed to know how to implement it so I when ahead and did it.
 > cd rescript-state-machine-twitter
 > yarn && yarn dev
 ```
+
+![screen-shot](./TwitterButton.png)
